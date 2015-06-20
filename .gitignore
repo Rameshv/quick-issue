@@ -25,7 +25,7 @@ DerivedData
 #
 
 .DS_Store
-Pods/
+#Pods/
 .idea/
 # Carthage
 #

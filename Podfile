@@ -17,7 +17,7 @@ target 'Sample' do
 end
 
 
-target 'SampleTests', :exclusive => true  do
+target 'SampleTests'  do
 
     platform :ios, '8.0'
     use_frameworks!

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0779003791607B3A3C5E1E90 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC4E5E3B45E6BEBEA290C73 /* libPods.a */; };
 		3FA383FA1B34529900BBC09B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA383F91B34529900BBC09B /* AppDelegate.swift */; };
 		3FA383FC1B34529900BBC09B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA383FB1B34529900BBC09B /* ViewController.swift */; };
 		3FA383FF1B34529900BBC09B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FA383FD1B34529900BBC09B /* Main.storyboard */; };
@@ -21,7 +20,6 @@
 		72384C3CE6100309E300631E /* Pods_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B13FF992A75E1BDD666C64 /* Pods_SampleTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		976662537ACA28E7545CB477 /* Pods_SampleTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B13FF992A75E1BDD666C64 /* Pods_SampleTests.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		9F8CDF767188F14B4733B095 /* libPods-Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 741FD21CC17C5DAC4392DD0F /* libPods-Sample.a */; };
-		BE3EBD4093140D1CF030F829 /* libPods-Sample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 741FD21CC17C5DAC4392DD0F /* libPods-Sample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,7 +65,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9F8CDF767188F14B4733B095 /* libPods-Sample.a in Frameworks */,
-				0779003791607B3A3C5E1E90 /* libPods.a in Frameworks */,
 				72384C3CE6100309E300631E /* Pods_SampleTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -77,7 +74,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				976662537ACA28E7545CB477 /* Pods_SampleTests.framework in Frameworks */,
-				BE3EBD4093140D1CF030F829 /* libPods-Sample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +213,7 @@
 				3FA384061B34529900BBC09B /* Frameworks */,
 				3FA384071B34529900BBC09B /* Resources */,
 				0FB240E9351EEAFDC332DF8A /* Copy Pods Resources */,
+				3F08B5F31B356CD700FF0548 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -314,6 +311,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3F08B5F31B356CD700FF0548 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SampleTests/Pods-SampleTests-frameworks.sh\"";
 			showEnvVarsInLog = 0;
 		};
 		9578660CD73D2189EC5FED55 /* Check Pods Manifest.lock */ = {
@@ -488,7 +499,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Sample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sample-Brdidging-Header.h";
@@ -502,7 +513,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEFINES_MODULE = YES;
 				INFOPLIST_FILE = Sample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Sample-Brdidging-Header.h";
@@ -513,6 +524,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 861B8721C15EADB764547BD3 /* Pods-SampleTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -534,6 +546,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 115C68AD1A3DA10E8D571FD5 /* Pods-SampleTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
